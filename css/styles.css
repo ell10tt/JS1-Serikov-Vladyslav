@@ -1,0 +1,12 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.card {
+  display: inline-flex;
+}
+
+.card-image {
+  width: 150px;
+}/*# sourceMappingURL=styles.css.map */
