@@ -1,3 +1,5 @@
+import { updateCartCounter } from "./addToCart.js";
+
 const container = document.querySelector("#container");
 const API_URL = "https://v2.api.noroff.dev/gamehub";
 
@@ -14,25 +16,33 @@ async function fetchAndCreateProduct() {
             const title= document.createElement("h2");
             const price = document.createElement("p");
             const anchor = document.createElement("a");
+            const genre = document.createElement("p");
+            const ageRating = document.createElement("p");
 
             card.className = "card";
             image.className = "card-image";
             content.className = "card-content";
             title.className = "card-title";
             price.className = "card-price";
-            anchor.className = "card-link"
+            anchor.className = "card-link";
+            genre.className = "card-genre";
+            ageRating.className = "card-rating";
 
             image.src = product.image.url;
             image.alt = product.image.alt;
             title.textContent = product.title;
             price.textContent = product.price;
+            genre.textContent = product.genre;
+            ageRating.textContent = product.ageRating;
             anchor.href = `product/index.html?id=${product.id}`
 
             content.appendChild(title);
             content.appendChild(price);
+            content.appendChild(genre);
+            content.appendChild(ageRating);
             card.appendChild(image);
             card.appendChild(content);
-            anchor.appendChild(card)
+            anchor.appendChild(card);
 
             container.appendChild(anchor);
         })
@@ -42,3 +52,4 @@ async function fetchAndCreateProduct() {
 };
 
 fetchAndCreateProduct();
+updateCartCounter();

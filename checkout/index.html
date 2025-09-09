@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="./product.js" type="module"></script>
-    <title>Document</title>
+    <script defer type="module" src="./checkout.js"></script>
+    <title>GameHub: Cart</title>
 </head>
 <body>
     <header class="header">
@@ -20,12 +20,20 @@
             <a href="">Contacts</a>
         </nav>
 
-        <a class="cart" href="../checkout/index.html">
+        <a class="cart" href="./index.html">
             <img src="#" alt="Cart icon">
             <span id="cart__counter">0</span>
         </a>
     </header>
 
-    <div class="container" id="container"></div>
+    <div class="container" id="container">
+        <div id="cart__container">
+
+        </div>
+
+        <div class="cart__total">
+            <h2>Total: $<span id="cart__total__price">0.00</span></h2>
+        </div>
+    </div>
 </body>
 </html>
