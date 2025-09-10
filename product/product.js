@@ -1,4 +1,6 @@
-import { updateCartCounter } from "../js/addToCart.js";
+import { updateCartCounter } from "../js/ui.js";
+import { addToCart } from "../js/cart.js";
+
 
 const container = document.querySelector("#container");
 const API_URL = "https://v2.api.noroff.dev/gamehub";
@@ -26,18 +28,14 @@ async function fetchAndCreateProduct() {
         const addToCartButton = document.createElement("button");
 
         addToCartButton.addEventListener("click", ()=> {
-            const addProduct = {
+            const productToAdd = {
                 id: product.id,
                 title: product.title,
                 price: product.price,
                 image: product.image.url
             };
 
-            const currentCart = JSON.parse(localStorage.getItem("cart")) || [];
-
-            currentCart.push(addProduct);
-
-            localStorage.setItem("cart", JSON.stringify(currentCart));
+            addToCart(productToAdd);
 
             addToCartButton.textContent = "Product was added!";
             addToCartButton.disabled = true;
