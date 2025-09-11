@@ -22,13 +22,13 @@ async function fetchAndCreateProduct() {
             const addToCartButton = document.createElement("button");
             
             card.className = "card";
-            image.className = "card-image";
-            content.className = "card-content";
-            title.className = "card-title";
-            price.className = "card-price";
-            anchor.className = "card-link";
-            genre.className = "card-genre";
-            ageRating.className = "card-rating";
+            image.className = "card__image";
+            content.className = "card__content";
+            title.className = "card__title";
+            price.className = "card__price";
+            anchor.className = "card__link";
+            genre.className = "card__genre";
+            ageRating.className = "card__rating";
             addToCartButton.className = "add__to__cart__button";
 
             image.src = product.image.url;
@@ -52,12 +52,16 @@ async function fetchAndCreateProduct() {
             };
 
             addToCart(productToAdd);
-
+            updateCartCounter();
+            
             addToCartButton.textContent = "Product was added!";
             addToCartButton.disabled = true;
-            // change here
 
-            updateCartCounter();
+            setTimeout(() => {
+                addToCartButton.textContent = "Add To Cart";
+
+                addToCartButton.disabled = false;
+            }, 500);
             });
 
             content.appendChild(title);

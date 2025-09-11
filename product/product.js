@@ -38,12 +38,17 @@ async function fetchAndCreateProduct() {
             };
 
             addToCart(productToAdd);
+            updateCartCounter();
 
             addToCartButton.textContent = "Product was added!";
             addToCartButton.disabled = true;
-            // change here
 
-            updateCartCounter();
+            setTimeout(() => {
+                addToCartButton.textContent = "Add To Cart";
+
+                addToCartButton.disabled = false;
+            }, 500);
+
         });
 
         productDiv.className = "product-details";

@@ -5,12 +5,50 @@
 
 body {
   font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
 }
 
-.card {
-  display: inline-flex;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 32px;
 }
 
-.card-image {
+.card p {
+  margin-top: 8px;
+}
+
+.card__image {
+  height: 200px;
   width: 150px;
+}
+
+.card__link {
+  display: flex;
+  width: 280px;
+  height: 424px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #1C1C1C;
+  border-style: solid;
+  border-radius: 30px;
+  border-width: 2px;
+  border-color: #1C1C1C;
+}
+
+.add__to__cart__button {
+  background-color: #62BEFF;
+  margin-top: 12px;
+  height: 32px;
+  width: 130px;
+  border-radius: 16px;
+  border-width: 0px;
+  font-weight: bold;
+  font-size: 14px;
 }/*# sourceMappingURL=styles.css.map */
