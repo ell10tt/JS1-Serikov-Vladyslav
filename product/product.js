@@ -1,4 +1,4 @@
-import { updateCartCounter } from "../js/ui.js";
+import { updateCartCounter, changeTitleName } from "../js/ui.js";
 import { addToCart } from "../js/cart.js";
 
 
@@ -18,6 +18,8 @@ async function fetchAndCreateProduct() {
         const responce = await fetch(`${API_URL}/${id}`);
         const data = await responce.json();
         const product = data.data;
+
+        changeTitleName(product);
 
         const productDiv = document.createElement("div");
         const image = document.createElement("img");
@@ -39,6 +41,7 @@ async function fetchAndCreateProduct() {
 
             addToCartButton.textContent = "Product was added!";
             addToCartButton.disabled = true;
+            // change here
 
             updateCartCounter();
         });

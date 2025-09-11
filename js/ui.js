@@ -7,3 +7,7 @@ export function updateCartCounter() {
         counterElement.textContent = cart.length;
     };
 };
+
+export function changeTitleName(product) {
+    document.title = `Product: ${product.title}`
+};

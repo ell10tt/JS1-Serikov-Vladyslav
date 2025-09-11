@@ -55,6 +55,7 @@ async function fetchAndCreateProduct() {
 
             addToCartButton.textContent = "Product was added!";
             addToCartButton.disabled = true;
+            // change here
 
             updateCartCounter();
             });
