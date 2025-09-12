@@ -1,0 +1,174 @@
+
+.main {
+    display: flex;
+    justify-content: center;
+
+    margin-bottom: 30px;
+}
+
+.payment__form {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 8px;  
+    }
+
+    .heading {
+        margin-top: 68px;
+
+        font-weight: 500;
+    }
+
+    .placeholder {
+        max-width: 320px;
+        max-height: 46px;
+
+        padding-left: 16px;
+
+        font-size: 16px;
+
+        background-color: #fff;
+
+        border-width: 2px;
+        border-radius: 10px;
+        border-color: #1c1c1c;
+
+    }
+
+    .placeholder:focus {
+        outline: none;
+    }
+
+    .placeholder__small {
+        max-width: 150px;
+        max-height: 46px;
+
+        padding-left: 16px;
+
+        font-size: 16px;
+
+        background-color: #fff;
+
+        border-width: 2px;
+        border-radius: 10px;
+        border-color: #1c1c1c;
+    }
+
+    .placeholder__small:focus {
+        outline: none;
+    }
+
+    .pay__button {
+        text-align: center;
+        align-content: center;
+
+        margin-left: 40px;
+
+        max-width: 260px;
+        max-height: 68px;
+
+        background-color: #62BEFF;
+
+        border-radius: 14px;
+        border-width: 0;
+
+        color: #1c1c1c;
+        text-decoration: none;
+        font-size: 32px;
+    }
+    .pay__button:hover {
+        background-color: #fff;
+        border-width: 2px;
+    }
+
+.footer {
+    position: fixed;
+    bottom: 0px;
+}
+
+// Grid system
+.item1 {
+    grid-column: span 4 / span 4;
+}
+
+.item2 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.item3 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.item4 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 3;
+}
+
+.item5 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+.item6 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 4;
+}
+
+.item7 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 4;
+}
+
+.item8 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 1;
+    grid-row-start: 5;
+}
+
+.item9 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 5;
+}
+
+.item10 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 6;
+    grid-row-start: 1;
+}
+
+.item11 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 6;
+    grid-row-start: 2;
+}
+
+.item12 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 6;
+    grid-row-start: 3;
+}
+
+.item13 {
+    grid-column-start: 6;
+    grid-row-start: 4;
+}
+
+.item14 {
+    grid-column-start: 7;
+    grid-row-start: 4;
+}
+
+.item15 {
+    grid-column: span 2 / span 2;
+    grid-column-start: 6;
+    grid-row-start: 5;
+}    
