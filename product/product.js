@@ -51,13 +51,13 @@ async function fetchAndCreateProduct() {
 
         });
 
-        productDiv.className = "product-details";
-        image.className = "product-image";
-        title.className = "product-title";
-        price.className = "product-price";
-        description.className = "product-description";
-        backButton.className = "product-back-button";
-        addToCartButton.className = "add-to-cart-button";
+        productDiv.className = "product__details";
+        image.className = "product__image";
+        title.className = "product__title";
+        price.className = "product__price";
+        description.className = "product__description";
+        backButton.className = "product__back__button";
+        addToCartButton.className = "add__to__cart__button";
 
         image.src = product.image.url;
         image.alt = product.image.alt;

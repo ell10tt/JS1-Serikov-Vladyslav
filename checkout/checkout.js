@@ -18,10 +18,19 @@ function removeItemFromCart (productId) {
 }
 
 if (cart.length === 0) {
-    cartContainer.innerHTML = "<p> Your cart is empty! </p>";
+    
+    const emptyCart = document.createElement("p");
+
+    emptyCart.textContent = "Your cart is empty!";
+
+    emptyCart.className = "cart__message";
+
+    cartContainer.appendChild(emptyCart);
+
 } else {
     let totalPrice = 0;
-    cartContainer.innerHTML = "";
+
+    cartContainer.replaceChildren();
 
     cart.forEach(product => {
         const itemTotalPrice = product.price * product.quantity;
@@ -29,17 +38,38 @@ if (cart.length === 0) {
         totalPrice += itemTotalPrice;
 
         const productElement = document.createElement("div");
+        const imageElement = document.createElement("img");
+        const detailDiv = document.createElement("div");
+        const titleElement = document.createElement("h3");
+        const priceElement = document.createElement("p");
+        const quantityElement = document.createElement("p");
+        const removeButton = document.createElement("button");
+        
+        
         productElement.className = "cart__item";
+        imageElement.className = "cart__item__image";
+        detailDiv.className = "cart__item__details";
+        titleElement.className = "cart__title";
+        priceElement.className = "cart__item__price";
+        quantityElement.className = "cart__item__quantitu";
+        removeButton.className = "remove__from__cart__button";
+        
+        imageElement.src = product.image;
+        imageElement.alt = product.title;
+        titleElement.textContent = product.title;
+        priceElement.textContent = `Price: $${product.price}`;
+        quantityElement.textContent = `Quantity: ${product.quantity}`;
+        removeButton.textContent = "Remove";
 
-        productElement.innerHTML = `
-        <img src="${product.image}" alt="${product.title}" class="cart__item__image">
-        <div class="cart__item__details">
-        <h3>${product.title}</h3>
-        <p>Price: $${product.price}</p>
-        <p>Quantity: ${product.quantity}</p>
-        </div>
-        <button class="remove__from__cart__button" data-id="${product.id}">Remove</button>
-        `;
+        removeButton.dataset.id = product.id;
+
+        detailDiv.appendChild(titleElement);
+        detailDiv.appendChild(priceElement);
+        detailDiv.appendChild(quantityElement);
+
+        productElement.appendChild(imageElement);
+        productElement.appendChild(detailDiv);
+        productElement.appendChild(removeButton);
 
         cartContainer.appendChild(productElement);
     });

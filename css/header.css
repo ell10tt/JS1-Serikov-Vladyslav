@@ -20,6 +20,11 @@
 }
 .header .navigation .navigation__item {
   text-decoration: none;
+  color: #1C1C1C;
+  font-size: 32px;
+}
+.header .navigation .navigation__item:hover {
+  color: #62BEFF;
 }
 .header .cart {
   text-decoration: none;
@@ -32,7 +37,7 @@
   height: 18px;
   width: 18px;
   font-size: 14px;
-  color: white;
+  color: #fff;
 }
 .header .cart .cart__icon {
   height: 36px;

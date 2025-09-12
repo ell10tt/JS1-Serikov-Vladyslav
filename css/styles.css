@@ -10,6 +10,46 @@ body {
 
 .container {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.all__button {
+  width: 166px;
+  height: 32px;
+  font-size: 16px;
+  background-color: #1C1C1C;
+  color: #fff;
+  border-radius: 16px;
+}
+
+.all__button:hover {
+  background-color: #fff;
+  color: #1C1C1C;
+}
+
+.filter__button:hover {
+  background-color: #fff;
+  color: #1C1C1C;
+}
+
+.filter__button {
+  width: 166px;
+  height: 32px;
+  font-size: 16px;
+  background-color: #1C1C1C;
+  color: aliceblue;
+  border-radius: 16px;
+}
+
+.filter__container {
+  display: flex;
+  gap: 32px;
+}
+
+.cards__container {
+  display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 32px;
@@ -51,4 +91,23 @@ body {
   border-width: 0px;
   font-weight: bold;
   font-size: 14px;
+}
+
+.add__to__cart__button:hover {
+  background-color: #1C1C1C;
+  color: #62BEFF;
+}
+
+.footer {
+  height: 80px;
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  font-size: 24px;
+}
+.footer a {
+  text-decoration: none;
+  color: #1C1C1C;
 }/*# sourceMappingURL=styles.css.map */
