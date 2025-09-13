@@ -6,6 +6,8 @@
   width: 100vw;
   height: 100px;
   font-size: 22px;
+  background-color: #1C1C1C;
+  margin-bottom: 32px;
 }
 .header .logo__link {
   margin-left: 16px;
@@ -20,7 +22,7 @@
 }
 .header .navigation .navigation__item {
   text-decoration: none;
-  color: #1C1C1C;
+  color: #fff;
   font-size: 32px;
 }
 .header .navigation .navigation__item:hover {

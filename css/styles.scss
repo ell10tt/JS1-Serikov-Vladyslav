@@ -3,9 +3,23 @@
     padding: 0;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     font-family: "Nunito", sans-serif;
     overflow-x: hidden;
+
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #ececec;
+}
+
+main {
+    flex-grow: 1;
 }
 
 .container {
@@ -74,22 +88,10 @@ body {
     width: 150px;
 }
 
-.card__content {
-
-}
-
-.card__title {
-
-}
-
-.card__price {
-
-}
-
 .card__link {
     display: flex;
     
-    width: 280px;
+    width: 300px;
     height: 424px;
 
     text-align: center;
@@ -98,20 +100,14 @@ body {
 
     text-decoration: none;
 
+    background-color: #fff;
+
     color: #1C1C1C;
 
-    border-style: solid;
+    // border-style: solid;
     border-radius: 30px;
-    border-width: 2px;
-    border-color: #1C1C1C;
-}
-
-.card__genre {
-
-}
-
-.card__rating {
-
+    // border-width: 2px;
+    // border-color: #1C1C1C;
 }
 
 .add__to__cart__button {
@@ -132,15 +128,34 @@ body {
 
 .footer {
     height: 80px;
+    width: 100vw;
     display: flex;
     gap: 32px;
     align-items: center;
     justify-content: center;
-    margin-top: 32px;
     font-size: 24px;
+
+    background-color: #1C1C1C;
+
+    margin-top: 32px;
+
+    // position: fixed;
+    // bottom: 0;
+
 
     a {
         text-decoration: none;
-        color: #1C1C1C;
+        color: #fff;
     }
+}
+
+.confirmation__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.heading {
+    font-size: 32px;
 }

@@ -10,6 +10,7 @@
 
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/cart.css">
 
     <script defer type="module" src="./checkout.js"></script>
     <title>GameHub: Cart</title>
@@ -23,9 +24,9 @@
         <nav class="navigation">
             <a class="navigation__item" href="../index.html">Home</a>
 
-            <a class="navigation__item" href="">About Us</a>
+            <a class="navigation__item" href="#">About Us</a>
 
-            <a class="navigation__item" href="">Contacts</a>
+            <a class="navigation__item" href="#">Contacts</a>
         </nav>
 
         <a class="cart" href="../checkout/index.html">
@@ -37,15 +38,22 @@
     </header>
 
     <main class="container" id="container">
+        <h2 class="cart__heading">Your Cart:</h2>
         <div id="cart__container">
 
         </div>
 
         <div class="cart__total">
             <h2>Total: $<span id="cart__total__price">0.00</span></h2>
+            <a class="go__to__payment" href="../payment/index.html">Go to payment</a>
         </div>
 
-        <a class="go__to__payment" href="../payment/index.html">Go to payment</a>
     </main>
+
+    <footer class="footer">
+        <a href="">Privacy Policy</a>
+        <a href="">Terms and Conditions page</a>
+        <a href="./index.html">GameHub</a>
+    </footer>
 </body>
 </html>
