@@ -108,9 +108,9 @@ async function fetchAndCreateProduct() {
         displayGames(allGames);
         setupFilterButtons();
     } catch (error) {
-        console.error("Failed to fetch and create products", error);
+        container.textContent = "Failed to load product";
     }
-}
+};
 
 fetchAndCreateProduct();
 updateCartCounter();

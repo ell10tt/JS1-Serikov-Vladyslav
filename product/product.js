@@ -77,7 +77,6 @@ async function fetchAndCreateProduct() {
 
         container.appendChild(productDiv);
     } catch (error) {
-        console.error("Failed to fetch product", error);
         container.textContent = "Failed to load product";
     };
 };
